@@ -1,14 +1,14 @@
 @echo off
 
 rem apollo config db info
-rem set apollo_config_db_url="jdbc:mysql://192.168.6.225:3306/ApolloConfigDB?characterEncoding=utf8"
-rem set apollo_config_db_username="root"
-rem set apollo_config_db_password="123456"
+set apollo_config_db_url="jdbc:mysql://192.168.6.225:3306/ApolloConfigDB?characterEncoding=utf8"
+set apollo_config_db_username="root"
+set apollo_config_db_password="123456"
 
 rem apollo portal db info
-rem set apollo_portal_db_url="jdbc:mysql://192.168.6.225:3306/ApolloPortalDB?characterEncoding=utf8"
-rem set apollo_portal_db_username="root"
-rem set apollo_portal_db_password="123456"
+set apollo_portal_db_url="jdbc:mysql://192.168.6.225:3306/ApolloPortalDB?characterEncoding=utf8"
+set apollo_portal_db_username="root"
+set apollo_portal_db_password="123456"
 
 rem apollo config db info
 rem set apollo_config_db_url="jdbc:mysql://rm-wz9l3xdq1skwrh5b8.mysql.rds.aliyuncs.com:3306/ApolloConfigDB?characterEncoding=utf8"
@@ -21,17 +21,17 @@ rem set apollo_portal_db_username="leon"
 rem set apollo_portal_db_password="Frxs123s5$"
 
 rem apollo config db info
-set apollo_config_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloConfigDB?characterEncoding=utf8"
-set apollo_config_db_username="frxsleon123"
-set apollo_config_db_password="Frxs@yx4Java-2018"
+rem set apollo_config_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloConfigDB?characterEncoding=utf8"
+rem set apollo_config_db_username="frxsleon123"
+rem set apollo_config_db_password="Frxs@yx4Java-2018"
 
 rem apollo portal db info
-set apollo_portal_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloPortalDB?characterEncoding=utf8"
-set apollo_portal_db_username="frxsleon123"
-set apollo_portal_db_password="Frxs@yx4Java-2018"
+rem set apollo_portal_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloPortalDB?characterEncoding=utf8"
+rem set apollo_portal_db_username="frxsleon123"
+rem set apollo_portal_db_password="Frxs@yx4Java-2018"
 
 rem meta server url, different environments should have different meta server addresses
-set dev_meta="http://192.168.6.221:8280"
+set dev_meta="http://192.168.6.221:8112"
 set uat_meta="http://172.18.61.148:8112"
 set pro_meta="http://10.168.1.115"
 
@@ -58,7 +58,7 @@ echo "==== building portal finished ===="
 
 echo "==== starting to build client ===="
 
-call mvn clean deploy -DskipTests -pl apollo-client -am %META_SERVERS_OPTS%
+call mvn clean install -DskipTests -pl apollo-client -am %META_SERVERS_OPTS%
 
 echo "==== building client finished ===="
 
