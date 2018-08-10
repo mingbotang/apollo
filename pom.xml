@@ -898,12 +898,14 @@
 	</reporting>
 	<distributionManagement>
 		<repository>
-			<id>releases</id>
-			<url>${releases.repo}</url>
+			<id>maven-releases</id>
+			<name>Frxs Nexus Release Repository</name>
+			<url>http://nexus.frxs.cn/repository/maven-releases</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
-			<url>${snapshots.repo}</url>
+			<id>maven-snapshots</id>
+			<name>Frxs Nexus Snapshot Repository</name>
+			<url>http://nexus.frxs.cn/repository/maven-snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>

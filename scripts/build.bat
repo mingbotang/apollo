@@ -1,20 +1,39 @@
 @echo off
 
 rem apollo config db info
-set apollo_config_db_url="jdbc:mysql://localhost:3306/ApolloConfigDB?characterEncoding=utf8"
+set apollo_config_db_url="jdbc:mysql://192.168.6.225:3306/ApolloConfigDB?characterEncoding=utf8"
 set apollo_config_db_username="root"
-set apollo_config_db_password=""
+set apollo_config_db_password="123456"
 
 rem apollo portal db info
-set apollo_portal_db_url="jdbc:mysql://localhost:3306/ApolloPortalDB?characterEncoding=utf8"
+set apollo_portal_db_url="jdbc:mysql://192.168.6.225:3306/ApolloPortalDB?characterEncoding=utf8"
 set apollo_portal_db_username="root"
-set apollo_portal_db_password=""
+set apollo_portal_db_password="123456"
+
+rem apollo config db info
+rem set apollo_config_db_url="jdbc:mysql://rm-wz9l3xdq1skwrh5b8.mysql.rds.aliyuncs.com:3306/ApolloConfigDB?characterEncoding=utf8"
+rem set apollo_config_db_username="leon"
+rem set apollo_config_db_password="Frxs123s5$"
+
+rem apollo portal db info
+rem set apollo_portal_db_url="jdbc:mysql://rm-wz9l3xdq1skwrh5b8.mysql.rds.aliyuncs.com:3306/ApolloPortalDB?characterEncoding=utf8"
+rem set apollo_portal_db_username="leon"
+rem set apollo_portal_db_password="Frxs123s5$"
+
+rem apollo config db info
+rem set apollo_config_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloConfigDB?characterEncoding=utf8"
+rem set apollo_config_db_username="frxsleon123"
+rem set apollo_config_db_password="Frxs@yx4Java-2018"
+
+rem apollo portal db info
+rem set apollo_portal_db_url="jdbc:mysql://rm-wz9nmhre7dedw83hx.mysql.rds.aliyuncs.com:3306/ApolloPortalDB?characterEncoding=utf8"
+rem set apollo_portal_db_username="frxsleon123"
+rem set apollo_portal_db_password="Frxs@yx4Java-2018"
 
 rem meta server url, different environments should have different meta server addresses
-set dev_meta="http://localhost:8080"
-set fat_meta="http://someIp:8080"
-set uat_meta="http://anotherIp:8080"
-set pro_meta="http://yetAnotherIp:8080"
+set dev_meta="http://192.168.6.221:8112"
+set uat_meta="http://172.18.61.148:8112"
+set pro_meta="http://10.168.1.115"
 
 set META_SERVERS_OPTS=-Ddev_meta=%dev_meta% -Dfat_meta=%fat_meta% -Duat_meta=%uat_meta% -Dpro_meta=%pro_meta%
 
