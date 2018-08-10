@@ -32,6 +32,7 @@ rem set apollo_portal_db_password="Frxs@yx4Java-2018"
 
 rem meta server url, different environments should have different meta server addresses
 set dev_meta="http://192.168.6.221:8112"
+set fat_meta="http://someIp:8112"
 set uat_meta="http://172.18.61.148:8112"
 set pro_meta="http://10.168.1.115"
 
